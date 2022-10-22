@@ -1,0 +1,17 @@
+.container {
+  margin: 3rem 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.container_2 {
+  margin: 8rem 5rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.row {
+  width: 100%;
+  max-width: 120rem;
+}/*# sourceMappingURL=general.css.map */
