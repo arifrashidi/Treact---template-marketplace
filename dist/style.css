@@ -52,6 +52,13 @@ a {
   width: 100%;
 }
 
+.container_3 {
+  padding: 8rem 5rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .row {
   width: 100%;
   max-width: 120rem;
@@ -105,6 +112,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  margin-bottom: 1.5rem;
 }
 
 .logo {
@@ -180,6 +188,7 @@ nav {
 
 .landing_page_trusted {
   font-weight: 700 !important;
+  font-size: 1.6rem;
   color: hsl(156deg, 3%, 60%);
 }
 
@@ -332,7 +341,6 @@ nav {
 }
 
 #pricing {
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -359,11 +367,10 @@ nav {
   margin: 0 auto;
 }
 .pricing_container .pricing_plans {
-  max-width: 100rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 6rem;
   flex-wrap: wrap;
-  row-gap: 5rem;
 }
 
 .pricing_plan {
@@ -371,7 +378,6 @@ nav {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 30px;
   background-color: white;
-  margin: 0 2rem;
 }
 .pricing_plan .pricing_plan_column_1 {
   padding: 2.4rem 0;
@@ -392,7 +398,7 @@ nav {
   font-size: 8.6rem;
   position: relative;
 }
-.pricing_plan .pricing_plan_column_1 > span:nth-child(2):before {
+.pricing_plan .pricing_plan_column_1 .pricing_plan_individual_price:before {
   content: "RM";
   color: hsl(203deg, 39%, 44%);
   font-size: 2rem;
@@ -400,7 +406,7 @@ nav {
   top: 20px;
   right: 52px;
 }
-.pricing_plan .pricing_plan_column_1 > span:nth-child(2):after {
+.pricing_plan .pricing_plan_column_1 .pricing_plan_individual_price:after {
   content: "per month";
   color: hsl(203deg, 39%, 44%);
   font-size: 1.6rem;
@@ -408,6 +414,25 @@ nav {
   position: absolute;
   bottom: 20px;
   left: 55px;
+}
+.pricing_plan .pricing_plan_column_1 .pricing_plan_small_business_price:before,
+.pricing_plan .pricing_plan_column_1 .pricing_plan_large_company_price:before {
+  content: "RM";
+  color: hsl(203deg, 39%, 44%);
+  font-size: 2rem;
+  position: absolute;
+  top: 20px;
+  right: 102px;
+}
+.pricing_plan .pricing_plan_column_1 .pricing_plan_small_business_price:after,
+.pricing_plan .pricing_plan_column_1 .pricing_plan_large_company_price:after {
+  content: "per month";
+  color: hsl(203deg, 39%, 44%);
+  font-size: 1.6rem;
+  font-weight: 500;
+  position: absolute;
+  bottom: 20px;
+  left: 107px;
 }
 .pricing_plan .pricing_plan_column_2 {
   padding: 2.4rem 0;
@@ -446,4 +471,65 @@ nav {
 }
 .pricing_plan .pricing_plan_column_3 > button:hover {
   background-color: hsl(203deg, 39%, 38%);
+}
+
+footer {
+  background-color: hsl(203deg, 39%, 38%);
+}
+
+.footer_column_1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 5rem 8rem;
+  padding-bottom: 8rem;
+  border-bottom: solid 2px hsl(203deg, 39%, 44%);
+}
+.footer_column_1 .footer_links {
+  display: flex;
+  flex-direction: column;
+}
+.footer_column_1 .footer_links > span {
+  color: hsl(183deg, 70%, 98%);
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+.footer_column_1 .footer_links > a {
+  color: white;
+  margin-bottom: 2rem;
+  font-size: 1.4rem;
+}
+
+.footer_column_2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 8rem;
+}
+.footer_column_2 .footer_logo {
+  display: flex;
+  align-items: center;
+}
+.footer_column_2 .footer_logo > img {
+  width: 3.2rem;
+  margin-right: 0.9rem;
+}
+.footer_column_2 .footer_logo > span {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: white;
+}
+.footer_column_2 > span {
+  color: white;
+  font-size: 1.7rem;
+}
+.footer_column_2 .footer_social_media a {
+  margin-left: 2rem;
+}
+.footer_column_2 .footer_social_media i {
+  color: hsl(203deg, 39%, 38%);
+  padding: 0.5rem;
+  background-color: white;
 }/*# sourceMappingURL=style.css.map */

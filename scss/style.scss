@@ -113,6 +113,7 @@ h2 {
 nav {
   height: 5rem;
   @include flex-space-between(row);
+  margin-bottom: 1.5rem;
 }
 
 .logo {
@@ -198,6 +199,7 @@ nav {
 
 .landing_page_trusted {
   font-weight: 700 !important;
+  font-size: 1.6rem;
   color: $third_clr_light;
 }
 
@@ -346,12 +348,10 @@ nav {
 // PRICING
 
 #pricing {
-  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 
 .pricing_container {
   display: flex;
@@ -374,21 +374,18 @@ nav {
     }
   }
   .pricing_plans {
-    max-width: 100rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 6rem;
     flex-wrap: wrap;
-    row-gap: 5rem;
   }
 }
-
 
 .pricing_plan {
   width: 28rem;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 30px;
   background-color: white;
-  margin: 0 2rem;
   //pricing_plan_column_1
   .pricing_plan_column_1 {
     padding: 2.4rem 0;
@@ -405,26 +402,45 @@ nav {
   }
   .pricing_plan_column_1 > span:nth-child(2) {
     font-weight: 700;
-    color:$primary_clr_dark;
+    color: $primary_clr_dark;
     font-size: 8.6rem;
     position: relative;
   }
-  .pricing_plan_column_1 > span:nth-child(2):before {
-    content: 'RM';
+  .pricing_plan_column_1 .pricing_plan_individual_price:before {
+    content: "RM";
     color: $secondary_clr;
     font-size: 2rem;
     position: absolute;
     top: 20px;
     right: 52px;
   }
-  .pricing_plan_column_1 > span:nth-child(2):after {
-    content: 'per month';
+  .pricing_plan_column_1 .pricing_plan_individual_price:after {
+    content: "per month";
     color: $secondary_clr;
     font-size: 1.6rem;
     font-weight: 500;
     position: absolute;
     bottom: 20px;
     left: 55px;
+  }
+  .pricing_plan_column_1 .pricing_plan_small_business_price:before,
+  .pricing_plan_column_1 .pricing_plan_large_company_price:before {
+    content: "RM";
+    color: $secondary_clr;
+    font-size: 2rem;
+    position: absolute;
+    top: 20px;
+    right: 102px;
+  }
+  .pricing_plan_column_1 .pricing_plan_small_business_price:after,
+  .pricing_plan_column_1 .pricing_plan_large_company_price:after {
+    content: "per month";
+    color: $secondary_clr;
+    font-size: 1.6rem;
+    font-weight: 500;
+    position: absolute;
+    bottom: 20px;
+    left: 107px;
   }
   //pricing_plan_column_2
   .pricing_plan_column_2 {
@@ -448,25 +464,89 @@ nav {
     font-weight: 500;
     color: $third_clr_light;
   }
-//pricing_plan_column_3
-    .pricing_plan_column_3 {
-      padding: 2.4rem 0;
-      display: flex;
-      justify-content: center;
-      > button {
-        margin: 0 auto;
-        padding: 1.2rem 2.4rem;
-        background-color: $secondary_clr;
-        border-radius: 900px;
-        border: none;
-        transition: all 300ms ease;
-        color: white;
-        &:hover {
-          background-color: $secondary_clr_dark;
-        }
+  //pricing_plan_column_3
+  .pricing_plan_column_3 {
+    padding: 2.4rem 0;
+    display: flex;
+    justify-content: center;
+    > button {
+      margin: 0 auto;
+      padding: 1.2rem 2.4rem;
+      background-color: $secondary_clr;
+      border-radius: 900px;
+      border: none;
+      transition: all 300ms ease;
+      color: white;
+      &:hover {
+        background-color: $secondary_clr_dark;
       }
+    }
+  }
+}
+
+// FOOTER
+
+footer {
+  background-color: $secondary_clr_dark;
+}
+
+.footer_column_1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 5rem 8rem;
+  padding-bottom: 8rem;
+  border-bottom: solid 2px $secondary_clr;
+  .footer_links {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer_links > span {
+    color: $primary_clr;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 3rem;
+  }
+  .footer_links > a {
+    color: white;
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+  }
+}
+
+.footer_column_2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 8rem;
+  .footer_logo {
+    display: flex;
+    align-items: center;
+    > img {
+      width: 3.2rem;
+      margin-right: 0.9rem;
+    }
+    > span {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: white;
+    }
+  }
+  > span {
+    color: white;
+    font-size: 1.7rem;
+  }
+  .footer_social_media {
+    a{
+      margin-left: 2rem;
+    }
+    i {
+    color: $secondary_clr_dark;
+    padding: 0.5rem;
+    background-color: white;
     }
 
 
-
+  }
 }
