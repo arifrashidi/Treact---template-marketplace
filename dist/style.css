@@ -12,6 +12,10 @@ html {
   scroll-behavior: smooth;
 }
 
+* {
+  font-family: "Roboto", sans-serif;
+}
+
 *,
 *::before,
 *::after {
@@ -19,7 +23,6 @@ html {
   padding: 0;
   margin: 0;
   line-height: 1.1;
-  font-family: "Roboto", sans-serif;
 }
 
 p,
@@ -69,7 +72,7 @@ body {
 }
 
 h1 {
-  font-size: clamp(3.4rem, 4.5vw, 4.6rem);
+  font-size: 4.8rem;
   font-family: "Clash_Display", sans-serif;
   color: hsl(203deg, 39%, 44%);
   font-weight: 700;
@@ -159,13 +162,14 @@ nav {
 }
 
 #landing_page {
-  height: calc(100vh - 11rem);
+  min-height: calc(100vh - 6rem);
   display: flex;
   align-items: center;
   flex-direction: row-reverse;
 }
 #landing_page figure {
   width: 50%;
+  max-width: 58.5rem;
 }
 #landing_page img {
   width: 100%;
@@ -182,7 +186,8 @@ nav {
   margin-bottom: 2rem;
 }
 #landing_page .landing_page_trusted_logo {
-  width: 75%;
+  display: block;
+  width: 41.5rem;
   opacity: 0.6;
 }
 
@@ -255,7 +260,6 @@ nav {
 }
 .features_description > p {
   max-width: 50rem;
-  font-weight: 500;
   text-align: center;
   margin: 0 auto;
 }
@@ -325,7 +329,6 @@ nav {
 }
 .quality_work_container .quality_work_description > p {
   max-width: 45rem;
-  font-weight: 500;
   margin-bottom: 3.4rem;
 }
 .quality_work_container .quality_work_description a {
@@ -362,7 +365,6 @@ nav {
 }
 .pricing_container .pricing_description > p {
   max-width: 50rem;
-  font-weight: 500;
   text-align: center;
   margin: 0 auto;
 }
@@ -491,14 +493,21 @@ footer {
 }
 .footer_column_1 .footer_links > span {
   color: hsl(183deg, 70%, 98%);
-  font-size: 1.8rem;
-  font-weight: 500;
+  font-size: 1.6rem;
+  font-weight: 600;
   margin-bottom: 3rem;
 }
 .footer_column_1 .footer_links > a {
   color: white;
   margin-bottom: 2rem;
   font-size: 1.4rem;
+  transition: all 300ms ease;
+}
+.footer_column_1 .footer_links > a:hover {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 1.5px;
 }
 
 .footer_column_2 {
@@ -511,6 +520,7 @@ footer {
 .footer_column_2 .footer_logo {
   display: flex;
   align-items: center;
+  width: 12.8rem;
 }
 .footer_column_2 .footer_logo > img {
   width: 3.2rem;
@@ -524,12 +534,245 @@ footer {
 .footer_column_2 > span {
   color: white;
   font-size: 1.7rem;
+  text-align: center;
 }
 .footer_column_2 .footer_social_media a {
-  margin-left: 2rem;
+  margin-left: 1.2rem;
+}
+.footer_column_2 .footer_social_media a:first-child {
+  margin: 0;
 }
 .footer_column_2 .footer_social_media i {
   color: hsl(203deg, 39%, 38%);
-  padding: 0.5rem;
+  font-size: 1.8rem;
+  padding: 0.7rem;
   background-color: white;
+  border-radius: 9999px;
+}
+
+@media (max-width: 984px) {
+  h1 {
+    font-size: 4.6rem;
+  }
+  #landing_page {
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  #landing_page figure {
+    width: 100%;
+  }
+  #landing_page .landing_page_description {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+  #landing_page h1 {
+    margin-top: 5rem;
+    text-align: center;
+    width: 80%;
+  }
+  #landing_page p {
+    margin-bottom: 3rem;
+    text-align: center;
+    width: 70%;
+  }
+  #landing_page .landing_page_trusted_logo {
+    width: 50%;
+    min-width: 24rem;
+  }
+  .features_services {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem 2rem;
+    margin: 0 2rem;
+  }
+  .features_service {
+    width: calc(50% - 6rem);
+    display: flex;
+  }
+  .quality_work_container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    row-gap: 4rem;
+  }
+  .quality_work_container figure {
+    width: 100%;
+    max-width: 56rem;
+  }
+  .quality_work_container figure img {
+    width: 100%;
+  }
+  .quality_work_container .quality_work_description {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .quality_work_container .quality_work_description h2 {
+    text-align: center;
+  }
+  .quality_work_container .quality_work_description > p {
+    margin-bottom: 2.2rem;
+    text-align: center;
+  }
+}
+@media (max-width: 872px) {
+  .nav_links {
+    display: none;
+  }
+  .features_container {
+    align-items: center;
+  }
+  .features_services {
+    display: flex;
+    justify-content: center;
+    row-gap: 5rem;
+    width: 50%;
+  }
+  .features_service {
+    width: 100%;
+    display: flex;
+  }
+}
+@media (max-width: 750px) {
+  .features_service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .features_icon {
+    margin: 0 0 2rem 0;
+  }
+  .features_service_description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .features_service_description p {
+    text-align: center;
+  }
+  .footer_column_2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    padding-top: 8rem;
+    row-gap: 2rem;
+  }
+  .footer_column_2 > span {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+  .footer_column_2 .footer_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 14rem;
+  }
+}
+@media (max-width: 550px) {
+  h1 {
+    font-size: 4.3rem;
+  }
+  h2 {
+    font-size: 3.4rem;
+  }
+  p {
+    font-size: 1.6rem;
+  }
+  .section_title {
+    font-size: 1.8rem;
+  }
+  .landing_page_input {
+    margin-bottom: 12rem;
+    position: relative;
+    width: 100%;
+  }
+  .landing_page_input input {
+    width: 100%;
+    padding: 2.5rem 0;
+    padding-left: 2rem;
+    font-size: 1.6rem;
+  }
+  .landing_page_input button {
+    display: block;
+    font-weight: 500;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border: none;
+    border: none;
+    padding: 0;
+    font-size: 2rem;
+    transform: translateY(8.6rem);
+  }
+  .pricing_plans {
+    gap: 5rem !important;
+  }
+  .pricing_plan {
+    width: 24rem;
+  }
+  .pricing_plan .pricing_plan_column_1 {
+    padding: 2rem 0;
+  }
+  .pricing_plan .pricing_plan_column_1 > span:nth-child(1) {
+    font-size: 1.6rem;
+  }
+  .pricing_plan .pricing_plan_column_1 > span:nth-child(2) {
+    font-size: 7.4rem;
+  }
+  .pricing_plan .pricing_plan_column_1 .pricing_plan_individual_price:before {
+    font-size: 1.6rem;
+  }
+  .pricing_plan .pricing_plan_column_1 .pricing_plan_individual_price:after {
+    font-size: 1.4rem;
+  }
+  .pricing_plan .pricing_plan_column_1 .pricing_plan_small_business_price:before,
+.pricing_plan .pricing_plan_column_1 .pricing_plan_large_company_price:before {
+    font-size: 1.6rem;
+    position: absolute;
+    right: 95px;
+  }
+  .pricing_plan .pricing_plan_column_1 .pricing_plan_small_business_price:after,
+.pricing_plan .pricing_plan_column_1 .pricing_plan_large_company_price:after {
+    font-size: 1.4rem;
+    position: absolute;
+    left: 95px;
+  }
+  .pricing_plan .pricing_plan_column_2 {
+    padding: 2rem 0;
+    padding-left: 3rem;
+  }
+  .pricing_plan .pricing_plan_column_2 > span:nth-child(1) {
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+  }
+  .pricing_plan .pricing_plan_column_2 > span:nth-child(2),
+.pricing_plan .pricing_plan_column_2 > span:nth-child(3),
+.pricing_plan .pricing_plan_column_2 > span:nth-child(4),
+.pricing_plan .pricing_plan_column_2 > span:nth-child(5) {
+    margin: 1rem 0;
+    font-size: 1.4rem;
+  }
+  .pricing_plan .pricing_plan_column_3 {
+    padding: 2rem 0;
+  }
+  .pricing_plan .pricing_plan_column_3 > button {
+    padding: 1.2rem 2.2rem;
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 3.6rem;
+  }
+  h2 {
+    font-size: 3.2rem;
+  }
 }/*# sourceMappingURL=style.css.map */
