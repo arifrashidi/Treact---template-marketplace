@@ -4,7 +4,7 @@
 
 
 .container {
-  margin: 3rem 5rem;
+  margin: 3rem 3rem;
   display: flex;
   justify-content: center;
 }
@@ -26,4 +26,21 @@
 .row {
   width: 100%;
   max-width: 120rem;
+}
+
+@media (max-width: 400px) {
+
+  .container_2 {
+    margin: 8rem 3rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .container_3 {
+    padding: 8rem 3rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
 }

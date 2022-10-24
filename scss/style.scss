@@ -167,17 +167,31 @@ nav {
   }
 }
 
+.nav_button_menu {
+  border: none;
+  background-color: transparent;
+  display: none;
+  i {
+  font-size: 3.4rem;
+  text-align: center;
+  border: none;
+  color: $secondary_clr;
+  }
+}
+
 // LANDING_PAGE
 
 #landing_page {
   min-height: calc(100vh - 6rem);
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: row-reverse;
 
   figure {
     width: 50%;
     max-width: 58.5rem;
+    animation: fade_up 650ms 600ms backwards;
   }
 
   img {
@@ -191,28 +205,32 @@ nav {
   }
   h1 {
     margin-bottom: 2rem;
+    animation: fade_up 650ms 200ms backwards;
   }
   p {
     margin-bottom: 2rem;
+    animation: fade_up 650ms 400ms backwards;
+  }
+
+  .landing_page_trusted {
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: $third_clr_light;
+    animation: fade_up 650ms 800ms backwards;
   }
 
   .landing_page_trusted_logo {
     display: block;
     width: 41.5rem;
-    opacity: 0.6;
+    animation: fade_up_trusted_logo 650ms 800ms both;
   }
-}
-
-.landing_page_trusted {
-  font-weight: 700 !important;
-  font-size: 1.6rem;
-  color: $third_clr_light;
 }
 
 .landing_page_input {
   margin-bottom: 3rem;
   position: relative;
   width: 40rem;
+  animation: fade_up 650ms 600ms backwards;
   input {
     width: 100%;
     padding: 2.5rem 16rem 2.5rem 2rem;
@@ -247,6 +265,28 @@ nav {
     &:hover {
       background-color: $secondary_clr_dark;
     }
+  }
+}
+
+@keyframes fade_up {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade_up_trusted_logo {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0.6;
+    transform: translateY(0);
   }
 }
 
@@ -653,11 +693,14 @@ footer {
 }
 
 @media (max-width: 872px) {
+  // NAV
   .nav_links {
     display: none;
   }
-
-  // FEATURES
+  .nav_button_menu {
+    display: inline-block;
+  }
+  
   .features_container {
     align-items: center;
   }
@@ -747,8 +790,7 @@ footer {
     width: 100%;
     input {
       width: 100%;
-      padding: 2.1rem 0;
-      padding-left: 2rem;
+      padding: 2.1rem 2rem;
       font-size: 1.6rem;
     }
     button {
