@@ -259,7 +259,7 @@ nav {
   text-align: center;
 }
 .features_description > p {
-  max-width: 50rem;
+  max-width: 55rem;
   text-align: center;
   margin: 0 auto;
 }
@@ -328,7 +328,7 @@ nav {
   text-align: left;
 }
 .quality_work_container .quality_work_description > p {
-  max-width: 45rem;
+  max-width: 55rem;
   margin-bottom: 3.4rem;
 }
 .quality_work_container .quality_work_description a {
@@ -364,7 +364,7 @@ nav {
   text-align: center;
 }
 .pricing_container .pricing_description > p {
-  max-width: 50rem;
+  max-width: 55rem;
   text-align: center;
   margin: 0 auto;
 }
@@ -572,7 +572,7 @@ footer {
   #landing_page h1 {
     margin-top: 5rem;
     text-align: center;
-    width: 80%;
+    max-width: 60rem;
   }
   #landing_page p {
     margin-bottom: 3rem;
@@ -580,7 +580,6 @@ footer {
     width: 70%;
   }
   #landing_page .landing_page_trusted_logo {
-    width: 50%;
     min-width: 24rem;
   }
   .features_services {
@@ -632,7 +631,7 @@ footer {
     display: flex;
     justify-content: center;
     row-gap: 5rem;
-    width: 50%;
+    max-width: 31.5rem;
   }
   .features_service {
     width: 100%;
@@ -640,6 +639,12 @@ footer {
   }
 }
 @media (max-width: 750px) {
+  .landing_page_trusted_logo {
+    width: 80% !important;
+  }
+  .features_services {
+    margin: 0;
+  }
   .features_service {
     display: flex;
     flex-direction: column;
@@ -676,13 +681,14 @@ footer {
 }
 @media (max-width: 550px) {
   h1 {
-    font-size: 4.3rem;
+    font-size: 4.4rem;
   }
   h2 {
-    font-size: 3.4rem;
+    font-size: 3.6rem;
   }
   p {
     font-size: 1.6rem;
+    width: 100% !important;
   }
   .section_title {
     font-size: 1.8rem;
@@ -694,7 +700,7 @@ footer {
   }
   .landing_page_input input {
     width: 100%;
-    padding: 2.5rem 0;
+    padding: 2.1rem 0;
     padding-left: 2rem;
     font-size: 1.6rem;
   }
@@ -710,7 +716,7 @@ footer {
     border: none;
     padding: 0;
     font-size: 2rem;
-    transform: translateY(8.6rem);
+    transform: translateY(7.5rem);
   }
   .pricing_plans {
     gap: 5rem !important;
@@ -768,11 +774,30 @@ footer {
     font-size: 1.4rem;
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 440px) {
+  .features_services {
+    max-width: none;
+  }
+}
+@media (max-width: 400px) {
   h1 {
-    font-size: 3.6rem;
+    font-size: 3.8rem;
   }
   h2 {
-    font-size: 3.2rem;
+    font-size: 3.4rem;
+  }
+  p {
+    font-size: 1.4rem;
+  }
+  #landing_page figure {
+    width: 80vw;
+  }
+  .landing_page_trusted {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 330px) {
+  .footer_column_1 .footer_links {
+    align-items: center;
   }
 }/*# sourceMappingURL=style.css.map */
