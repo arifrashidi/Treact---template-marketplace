@@ -1,4 +1,5 @@
-//STARTER
+
+//? PREPARATION
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap");
 
 @font-face {
@@ -53,8 +54,7 @@ body {
   background-color: $primary_clr;
 }
 
-//GENERAL
-// 3.8vw
+//? GENERAL
 h1 {
   font-size: 4.8rem;
   font-family: "Clash_Display", sans-serif;
@@ -112,7 +112,7 @@ h2 {
   }
 }
 
-//NAV
+//? NAV
 
 nav {
   height: 5rem;
@@ -290,7 +290,7 @@ nav {
   }
 }
 
-// FEATURES
+//? FEATURES 
 
 #features {
   min-height: 100vh;
@@ -353,7 +353,7 @@ nav {
   }
 }
 
-// QUALITY WORK
+//? QUALITY WORK 
 
 #quality_work {
   min-height: 60vh;
@@ -389,7 +389,7 @@ nav {
   }
 }
 
-// PRICING
+//? PRICING 
 
 #pricing {
   display: flex;
@@ -527,7 +527,7 @@ nav {
   }
 }
 
-// FOOTER
+//? FOOTER 
 
 footer {
   background-color: $secondary_clr_dark;
@@ -605,7 +605,7 @@ footer {
   }
 }
 
-// MEDIA QUARRIES
+/// MEDIA QUARIES 
 
 @media (max-width: 984px) {
   // GENERAL
