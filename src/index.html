@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Treact</title>
-    <link rel="stylesheet" href="./dist/style.css" />
+    <link rel="stylesheet" href="./style.scss" />
+    <link rel="shortcut icon" href="../assets_logo/logo.2c489fc453a1783cbadacf914efa3df6.svg" type="image/x-icon">
     <script
       src="https://kit.fontawesome.com/b7ef072d61.js"
       crossorigin="anonymous"
@@ -21,7 +22,7 @@
           <nav>
             <a href="#" class="logo">
               <img
-                src="./assets_logo/logo.2c489fc453a1783cbadacf914efa3df6.svg"
+                src="../assets_logo/logo.2c489fc453a1783cbadacf914efa3df6.svg"
                 alt=""
               />
               <div class="logo_name">React</div>
@@ -29,14 +30,45 @@
             <div class="nav_links">
               <a href="">About</a>
               <a href="">Blog</a>
-              <a href="">Pricing</a>
+              <a href="#pricing">Pricing</a>
               <a href="">Contact Us</a>
               <a href="">Login</a>
               <a href="" class="nav_last_button">Get Started</a>
             </div>
-            <button class="nav_button_menu">
-              <i class="fa-solid fa-bars"></i>
+
+            <!-- Modal Window -->
+
+            <button class="nav_button_menu" onclick="openMenu()">
+              <i class="fas fa-bars"></i>
             </button>
+            <div class="nav_menu_backdrop">
+              <button
+                class="nav_button_menu nav_button_menu_closed"
+                onclick="closeMenu()"
+              >
+                <i class="fas fa-times"></i>
+              </button>
+              <ul>
+                <li>
+                  <a href="" onclick="closeMenu()">Login</a>
+                </li>
+                <li>
+                  <a href="" onclick="closeMenu()">Get Started</a>
+                </li>
+                <li>
+                  <a href="" onclick="closeMenu()">Contact Us</a>
+                </li>
+                <li>
+                  <a href="#pricing" onclick="closeMenu()">Pricing</a>
+                </li>
+                <li>
+                  <a href="" onclick="closeMenu()">Blog</a>
+                </li>
+                <li>
+                  <a href="" onclick="closeMenu()">About</a>
+                </li>
+              </ul>
+            </div>
           </nav>
 
           <!-- LANDING PAGE -->
@@ -44,7 +76,7 @@
           <section id="landing_page">
             <figure>
               <img
-                src="./assets_illustration/Creation process-amico.svg"
+                src="../assets_illustration/Creation process-amico.svg"
                 alt=""
               />
             </figure>
@@ -61,7 +93,7 @@
               <p class="landing_page_trusted">OUR TRUSTED CUSTOMERS</p>
               <img
                 class="landing_page_trusted_logo"
-                src="./assets_logo/customers-logo-strip.680ac7c2e8ae28161d2c.png"
+                src="../assets_logo/customers-logo-strip.680ac7c2e8ae28161d2c.png"
                 alt=""
               />
             </div>
@@ -90,7 +122,7 @@
             <div class="features_service">
               <span class="features_icon">
                 <img
-                  src="./assets_icon/shield-icon.daefe14b320b14fbd9cbd18908ac93ec.svg"
+                  src="../assets_icon/shield-icon.daefe14b320b14fbd9cbd18908ac93ec.svg"
                   alt=""
                 />
               </span>
@@ -106,7 +138,7 @@
             <div class="features_service">
               <span class="features_icon">
                 <img
-                  src="./assets_icon/support-icon.f9253ffa8cb6ffde5bbaa05eb5136375.svg"
+                  src="../assets_icon/support-icon.f9253ffa8cb6ffde5bbaa05eb5136375.svg"
                   alt=""
                 />
               </span>
@@ -122,7 +154,7 @@
             <div class="features_service">
               <span class="features_icon">
                 <img
-                  src="./assets_icon/customize-icon.367468c90fd796009b97fbfba67b2c6a.svg"
+                  src="../assets_icon/customize-icon.367468c90fd796009b97fbfba67b2c6a.svg"
                   alt=""
                 />
               </span>
@@ -138,7 +170,7 @@
             <div class="features_service">
               <span class="features_icon">
                 <img
-                  src="./assets_icon/reliable-icon.1367510a8f0a1bec76dc425d25f92f43.svg"
+                  src="../assets_icon/reliable-icon.1367510a8f0a1bec76dc425d25f92f43.svg"
                   alt=""
                 />
               </span>
@@ -154,7 +186,7 @@
             <div class="features_service">
               <span class="features_icon">
                 <img
-                  src="./assets_icon/fast-icon.dbb971a73d4805d2fc3bcdacdb55beba.svg"
+                  src="../assets_icon/fast-icon.dbb971a73d4805d2fc3bcdacdb55beba.svg"
                   alt=""
                 />
               </span>
@@ -170,7 +202,7 @@
             <div class="features_service">
               <span class="features_icon">
                 <img
-                  src="./assets_icon/support-icon.f9253ffa8cb6ffde5bbaa05eb5136375.svg"
+                  src="../assets_icon/support-icon.f9253ffa8cb6ffde5bbaa05eb5136375.svg"
                   alt=""
                 />
               </span>
@@ -194,7 +226,7 @@
         <div class="row quality_work_container">
           <figure>
             <img
-              src="./assets_picture/hero-screenshot-1.40a097b525c2f8c9808e.png"
+              src="../assets_picture/hero-screenshot-1.40a097b525c2f8c9808e.png"
               alt=""
               loading="lazy"
             />
@@ -336,12 +368,15 @@
           <div class="footer_column_2">
             <a href="" class="footer_logo">
               <img
-                src="./assets_logo/logo-light.d9a5d1b5be5ea077b26864fdfc2e96a4.svg"
+                src="../assets_logo/logo-light.d9a5d1b5be5ea077b26864fdfc2e96a4.svg"
                 alt=""
               />
               <span>React</span>
             </a>
-            <span>© 2022 Treact Inc. All Rights Reserved.</span>
+            <div class="footer_column_2__creator">
+              <span>© 2022 Treact Inc. All Rights Reserved.</span>
+              <span>Built by Arif Rashidi</span>
+            </div>
             <div class="footer_social_media">
               <a href="">
                 <i class="fa-brands fa-facebook"></i>
@@ -357,5 +392,6 @@
         </div>
       </div>
     </footer>
+    <script src="./script.js"></script>
   </body>
 </html>
