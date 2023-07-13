@@ -191,7 +191,6 @@ nav {
   justify-content: center;
   align-items: center;
   transition: all 300ms ease;
-  opacity: 0;
   visibility: hidden;
 }
 
@@ -202,7 +201,6 @@ nav {
 
 .menu_open .nav_menu_backdrop {
   visibility: visible;
-  opacity: 1;
 }
 
 .nav_button_menu_closed {
