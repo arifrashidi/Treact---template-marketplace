@@ -194,12 +194,12 @@ nav {
   visibility: hidden;
 }
 
-.menu_open {
+.js-when-button-been-clicked {
   max-height: 100vh;
   overflow-y: hidden;
 }
 
-.menu_open .nav_menu_backdrop {
+.js-when-button-been-clicked .nav_menu_backdrop {
   visibility: visible;
 }
 
