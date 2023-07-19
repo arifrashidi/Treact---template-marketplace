@@ -778,10 +778,12 @@ footer {
   }
 }
 
+///🔸 MEDIA QUARIES : 750px
+
 @media (max-width: 750px) {
   // LANDING PAGE
   .landing_page_trusted_logo {
-    width: 80% !important;
+    width: 95% !important;
   }
   // FEATURES
   .features_services {
@@ -802,6 +804,10 @@ footer {
     p {
       text-align: center;
     }
+  }
+
+  .footer_column_2__creator span {
+    font-size: 1.4rem !important;
   }
 
   // FOOTER
@@ -846,6 +852,9 @@ footer {
   }
 
   // LANDING _PAGE
+  #landing_page h1 {
+    margin-top: 3rem;
+  }
 
   .landing_page_input {
     margin-bottom: 12rem;
